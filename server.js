@@ -23,11 +23,11 @@ app.get('/api/employees', (req, res) => {
   res.json(employees);
 });
 
-// GET route to return a specific employee by ID
-app.get('/api/employees/:id', (req, res) => {
-  const { id } = req.params;  // Extract employee ID from request parameters
+// GET route to return a specific employee by empid
+app.get('/api/employees/:empid', (req, res) => {
+  const { empid } = req.params;  
   const employees = getEmployeesData();
-  const employee = employees.find((emp) => emp.id === id);  // Find employee by ID
+  const employee = employees.find((emp) => emp.empid === empid);  // Find employee by empid
 
   if (employee) {
     res.json(employee);  // Return employee if found
