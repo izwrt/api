@@ -17,10 +17,23 @@ const getEmployeesData = () => {
   return JSON.parse(jsonData).employees;
 };
 
+// Function to read Files data from the JSON file
+const getFilesData = () => {
+  const filePath = path.join(__dirname, 'data', 'employees.json');
+  const jsonData = fs.readFileSync(filePath);
+  return JSON.parse(jsonData).files;
+};
+
 // GET route to return all employees
 app.get('/api/employees', (req, res) => {
   const employees = getEmployeesData();
   res.json(employees);
+});
+
+// GET route To return all files
+app.get('/api/files', (req, res) => {
+  const files = getFilesData();
+  res.json(files);
 });
 
 // GET route to return a specific employee by empid

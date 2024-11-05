@@ -11,7 +11,89 @@
       "endDate": "01/01/2025",
       "status": "Active",
       "empImg": "https://img.freepik.com/free-photo/young-business-woman-working-laptop-office_1303-22814.jpg",
-      "admin": true
+      "admin": true,
+      "files": 
+      {       
+        "file":[
+        {
+          "id": 1,
+          "fileName": "salary.pdf",
+          "field": "month one",
+          "fieldId": 1
+        },
+        {
+          "id": 2,
+          "fileName": "report.docx",
+          "field": "month two",
+          "fieldId": 2
+        },
+        {
+          "id": 3,
+          "fileName": "invoice.xlsx",
+          "field": "month three",
+          "fieldId": 3
+        },
+        {
+          "id": 4,
+          "fileName": "salary.pdf",
+          "field": "month one",
+          "fieldId": 1
+        },
+        {
+          "id": 5,
+          "fileName": "presentation.pptx",
+          "field": "month two",
+          "fieldId": 2
+        },
+        {
+          "id": 6,
+          "fileName": "budget.xlsx",
+          "field": "month three",
+          "fieldId": 3
+        },
+        {
+          "id": 7,
+          "fileName": "notes.txt",
+          "field": "month one",
+          "fieldId": 1
+        },
+        {
+          "id": 8,
+          "fileName": "salary.pdf",
+          "field": "month three",
+          "fieldId": 3
+        },
+        {
+          "id": 9,
+          "fileName": "summary.docx",
+          "field": "month two",
+          "fieldId": 2
+        },
+        {
+          "id": 10,
+          "fileName": "meeting_minutes.pdf",
+          "field": "month one",
+          "fieldId": 1
+        }
+      ],
+      "comments": [
+        {
+          "field": "month one",
+          "fieldId": 1,
+          "comment": "All the Salary files are added."
+        },
+        {
+          "field": "month two",
+          "fieldId": 2,
+          "comment": "Some of the files are need to Updated."
+        },
+        {
+          "field": "month three",
+          "fieldId": 3,
+          "comment": "Salary details are Prefect"
+        }
+      ]
+    }
     },
     {
       "id": "2",
