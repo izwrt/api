@@ -156,7 +156,7 @@
       "client": "Metaz",
       "startDate": "06/01/2024",
       "endDate": "06/01/2025",
-      "status": "Inactive",
+      "status": "Active/No Client",
       "empImg": "https://static.vecteezy.com/system/resources/thumbnails/024/354/241/small_2x/happy-girl-standing-in-creative-office-illustration-ai-generative-free-photo.jpg",
       "admin": false
     },
@@ -195,7 +195,7 @@
       "client": "Metaz",
       "startDate": "09/01/2024",
       "endDate": "09/01/2025",
-      "status": "Inactive",
+      "status": "Active/No Client",
       "empImg": "https://img.freepik.com/premium-photo/young-asian-woman-isolated-background-keeping-arms-crossed-frontal-position_264197-40952.jpg",
       "admin": false
     },
@@ -221,7 +221,7 @@
       "client": "Slide",
       "startDate": "11/01/2024",
       "endDate": "11/01/2025",
-      "status": "Inactive",
+      "status": "Active/No Client",
       "empImg": "https://img.freepik.com/premium-photo/woman-is-pictured-wearing-glasses-white-shirt_99233-6766.jpg",
       "admin": false
     },
