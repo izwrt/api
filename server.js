@@ -2,13 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid'); 
+
 const app = express();
 const port = 5000;
 
 app.use(cors({
-    origin: '*'
-  }));
-   // Enable CORS for cross-origin requests
+  origin: '*'
+}));  // Enable CORS for cross-origin requests
+
+app.use(express.json());  // Middleware to parse JSON bodies
 
 // Function to read employee data from the JSON file
 const getEmployeesData = () => {
@@ -17,11 +20,10 @@ const getEmployeesData = () => {
   return JSON.parse(jsonData).employees;
 };
 
-// Function to read Files data from the JSON file
-const getFilesData = () => {
+// Function to write updated employee data back to the JSON file
+const saveEmployeesData = (employees) => {
   const filePath = path.join(__dirname, 'data', 'employees.json');
-  const jsonData = fs.readFileSync(filePath);
-  return JSON.parse(jsonData).files;
+  fs.writeFileSync(filePath, JSON.stringify({ employees }, null, 2));
 };
 
 // GET route to return all employees
@@ -30,15 +32,9 @@ app.get('/api/employees', (req, res) => {
   res.json(employees);
 });
 
-// GET route To return all files
-app.get('/api/files', (req, res) => {
-  const files = getFilesData();
-  res.json(files);
-});
-
 // GET route to return a specific employee by empid
 app.get('/api/employees/:empid', (req, res) => {
-  const { empid } = req.params;  
+  const { empid } = req.params;
   const employees = getEmployeesData();
   const employee = employees.find((emp) => emp.empid === empid);  // Find employee by empid
 
@@ -49,7 +45,11 @@ app.get('/api/employees/:empid', (req, res) => {
   }
 });
 
-// Start the server on the specified port
+//PUT comments
+
+
+
+// Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
